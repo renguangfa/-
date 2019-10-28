@@ -1,0 +1,100 @@
+.order {
+    padding: 0 10rpx;
+}
+
+.order_list {
+    background-color: #393942;
+    padding: 0 24rpx;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.order_list_line1 {
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.order_line1_left {
+    color: #6C6D6E;
+    font-size: 28rpx;
+}
+
+.order_line1_right {
+    font-size: 32rpx;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.wancheng {
+    color: #4CA8E2;
+}
+
+.shiyong {
+    color: #F27400;
+}
+
+/* 机位地点 */
+.jiwei,
+.order_time_left {
+    font-size: 28rpx;
+    color: #fff;
+    padding-top: 10rpx;
+}
+
+/* 下单时间 */
+.order_time {
+    padding-bottom: 30rpx;
+}
+
+.time_right_img {
+    padding-top: 18rpx;
+}
+
+/* 下单时间和金钱 （已完成） */
+.time_money {
+    height: 110rpx;
+    border-top: 2rpx solid #48494F;
+}
+.time_money_img {
+    width: 36rpx;
+    height: 36rpx;
+    padding-left: 12rpx;
+    padding-top: 6rpx;
+    padding-right: 6rpx;
+    position: relative;
+    top: 6rpx;
+    
+}
+.time_money_left {
+    font-size: 36rpx;
+    color: #fff;
+    line-height: 110rpx;
+    padding-left: 16rpx;
+}
+.time_money_left:last-child{
+    padding-left: 86rpx;
+
+}
+.shiyong_time {
+    padding-bottom:52rpx;
+}
+.footer {
+    text-align: center;
+    font-size: 28rpx;
+    color: #6C6D6E;
+    margin-top: 68rpx;
+}
+.footer_img {
+    width: 30rpx;
+    height: 18rpx;
+}
+.kong_title {
+    padding-top: 200rpx;
+    padding-bottom: 60rpx;
+}

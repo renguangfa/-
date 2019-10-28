@@ -1,0 +1,80 @@
+<!-- pages/coupon/coupon.wxml -->
+<!-- 优惠券 -->
+<!-- 兑换优惠券 -->
+<view class="duihuan">
+    <view class="duihuan_left">
+        <input class="weui-input" placeholder="请输入兑换码" />
+    </view>
+    <view class="duihuan_right" bindtap="gotoast">兑换</view>
+</view>
+<!-- 充电优惠券  商家优惠券 -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar" style="background-color: #fff;">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);width:4rem;"></view>
+            </view>
+            <view class="weui-tab__panel" style="background-color: #1B1B22;">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                <view class="kong">
+                        <image class="kong_img" src="/assets/images/quan_kong.png" mode="widthFix"></image>
+                        
+                    </view>
+                    <view class="kong_flex">
+                    您还没有优惠券
+                        <!-- <view class="kong_title">您还没有优惠券</view> -->
+                        <!-- <view class="getquan">去获取</view> -->
+                    </view>
+                    <!-- <view class="quan_list">
+                        <view class="quan_list_left">
+                            <view class="quan_list_title">充电补贴</view>
+                            <view class="quan_list_cont">充值满20元可抵扣</view>
+                            <view class="quan_list_qi">有效期</view>
+                            <view class="quan_list_time">2019-10-11至10-25</view>
+                            <view class="quan_list_yuan"></view>
+                        </view>
+                        <view class="quan_list_right">
+                            <view class="price">
+                                2
+                                <span class="small_yuan">元</span>
+                            </view>
+                            <view class="gouse">去使用</view>
+                        </view>
+                    </view>
+                    <view class="quan_list">
+                        <view class="quan_list_left">
+                            <view class="quan_list_title">充电补贴</view>
+                            <view class="quan_list_cont">充值满20元可抵扣</view>
+                            <view class="quan_list_qi">有效期</view>
+                            <view class="quan_list_time">2019-10-11至10-25</view>
+                            <view class="quan_list_yuan"></view>
+                        </view>
+                        <view class="quan_list_right">
+                            <view class="price">
+                                2
+                                <span class="small_yuan">元</span>
+                            </view>
+                            <view class="gouse">去使用</view>
+                        </view>
+                    </view> -->
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view class="kong">
+                        <image class="kong_img" src="/assets/images/quan_kong.png" mode="widthFix"></image>
+                        
+                    </view>
+                    <view class="kong_flex">
+                    您还没有优惠券
+                        <!-- <view class="kong_title">您还没有优惠券</view> -->
+                        <!-- <view class="getquan">去获取</view> -->
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

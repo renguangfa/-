@@ -1,0 +1,67 @@
+@import 'font.wxss';
+@import 'weui.wxss';
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box
+}
+
+.weui-cell:after,
+.weui-cell:before,
+.weui-cells:after,
+.weui-cells:before {
+    border: none
+}
+
+page {
+    background-color: #1b1b22;
+    color: #fff
+}
+
+.textover {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+/* 按钮 */
+
+.btnbottom {
+    background-color: #F27400!important;
+    color: #fff!important;
+    font-size: 38rpx!important;
+    border-radius: 20rpx!important;
+    height: 120rpx;
+    line-height: 120rpx;
+}
+
+.right_icon {
+    width: 18rpx;
+    height: 30rpx;
+}
+
+/* 为空时显示的状态 */
+/*                  <view class="kong">
+                        <image class="kong_img" src="/assets/images/kong.png" mode="widthFix"></image>
+                        <view class="kong_title">您还没有优惠券</view>
+                    </view> 
+*/
+.kong {
+    padding-top: 40rpx;
+}
+.kong_img {
+    width: 516rpx;
+    height: 582rpx;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.kong_title {
+    color: #aaa;
+    text-align: center;
+}

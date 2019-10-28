@@ -1,0 +1,130 @@
+/* pages/wallet/wallet.wxss */
+.header {
+    background-color: #1B1B22;
+}
+.yue {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 28rpx;
+    color: #AAAAAA;
+}
+.money {
+    text-align: center;
+    font-size: 80rpx;
+    color: #F27400;
+}
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 30rpx;
+    padding-bottom: 80rpx;
+    width: 50%;
+}
+.recharge {
+    border-radius: 20rpx;
+    padding: 0rpx;
+    font-size: 32rpx;
+    background-color: #F27400!important;
+    color: #fff!important;
+}
+.weui-cells {
+    margin: 20rpx;
+    border-radius: 40rpx;
+    background-color: #393942;
+}
+.weui-cell__bd {
+    font-size: 32rpx!important;
+    padding-left: 10rpx;
+
+}
+.yajin_number {
+    color: #4ca8e2;
+    padding-left: 10rpx;
+}
+.yajin_btn {
+    width: 190rpx;
+    height: 66rpx;
+    line-height: 66rpx;
+    text-align: center;
+    border: 2rpx solid #f27400;
+    color: #f27400;
+    border-radius: 34rpx;
+    font-size: 30rpx;
+
+}
+
+/* 押金弹窗 */
+
+.edit_phone {
+    position: fixed;
+    background-color: #fff;
+    color: #393942;
+    top: 20%;
+    width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40rpx;
+    padding: 20rpx 40rpx;
+}
+.edit_phone_close {
+    font-size: 32rpx;
+    color: #aaaaaa;
+    display: flex;
+    position: relative;
+}
+.edit_phone_title {
+    color: #1b1b22;
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+}
+
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 64%;
+    padding-bottom: 40rpx;
+}
+.edit_btn {
+    height: 84rpx!important;
+    line-height: 84rpx!important;
+    border-radius: 20rpx!important;
+    background-color: #F27400!important;
+    border: 1px solid #F27400!important;
+    font-size: 36rpx!important;
+    color: #fff!important;
+}
+.close_img {
+    width: 28rpx;
+    height: 28rpx;
+    position: absolute;
+    right: 0px;
+    top: 10%;
+
+}
+.yajin_price {
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 30rpx;
+    
+}
+.yajin_price .price {
+    color: #F27400;
+    font-size: 80rpx;
+}
+.displaynone {
+    display: none;
+}
+.displayblock {
+    display: block;
+    z-index: 999;
+
+}
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}

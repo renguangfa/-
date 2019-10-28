@@ -1,0 +1,77 @@
+/* pages/recharge/recharge.wxss */
+
+.title {
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 40rpx;
+    font-size: 28rpx;
+    color: #6C6D6E;
+}
+
+.button-sp-area {
+    margin: 0 auto;
+    padding-top: 30rpx;
+    width: 75%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 40rpx;
+}
+
+.lsit {
+    width: 220rpx;
+    height: 102rpx;
+    text-align: center;
+    line-height: 102rpx;
+    font-size: 40rpx;
+    margin-top: 20rpx;
+    border: 1rpx solid #1B1B22;
+}
+
+.active {
+    color: #F27400;
+    border: 1rpx solid #F27400;
+    border-radius: 74rpx;
+}
+
+.noactive {
+    background-color: none;
+}
+.weui-cells {
+    margin: 0 20rpx;
+    background-color: #393942;
+    border-radius: 40rpx;
+    padding-left: 14rpx!important;
+}
+.weui-cell__bd {
+    font-size: 28rpx;
+    color: #AAAAAA;
+}
+.weui-cell__ft {
+    font-size: 28rpx!important;
+    color: #fff;
+}
+.weixin {
+    display: flex;
+    padding: 20rpx 40rpx;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    margin-top: 60rpx;
+    
+}
+.weixin_img {
+    width: 60rpx;
+    height: 60rpx;
+    position: relative;
+    top: 50%;
+    margin-top: -30rpx;
+    padding-right: 15rpx;
+    
+}
+.btnbottom {
+    margin-top: 70rpx!important;
+}

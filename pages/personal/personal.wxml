@@ -1,0 +1,131 @@
+<!-- pages/personal/personal.wxml -->
+<!-- 背景图片 -->
+<view class="{{type?'displayblock':'displaynone'}}">
+  <view class="bgi" style="background: url({{personArr.avatarUrl}}) no-repeat;background-size: cover; height: 400rpx;width: 800rpx;position: absolute;top: 0;left: 0;z-index: -1;-webkit-filter: blur(3px); filter: blur(3px);overflow: hidden;"></view>
+  <view class="header">
+    <!-- 标题 -->
+    <view class="biaoti" style="padding-top:{{barheight}}px;">
+      <view class="biaoti_left" bindtap="goIndex">
+        <image class="biaoti_img" src="/assets/images/left.png" mode="aspectFit"></image>
+      </view>
+      <view class="biaoto_right">个人中心</view>
+    </view>
+    <!-- 个人信息 -->
+    <view class="person">
+      <view class="person_left">
+        <image class="person_left_img" src="{{personArr.avatarUrl}}" mode="aspectFill"></image>
+      </view>
+      <view class="person_right">
+        <view class="name">{{personArr.nickName}}</view>
+        <view class="number">
+          {{personArr.phone}}
+          <image class="number_img" src="/assets/images/edit.png" mode="aspectFit" bindtap="show"></image>
+        </view>
+        <view class="type">微信已绑定</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="{{type?'displaynone':'displayblock'}}">
+  <view class="bgi" style="background: url(/assets/images/none-user.png) no-repeat;background-size: cover; background-position: center;height: 400rpx;width: 800rpx;position: absolute;top: 0;left: 0;z-index: -1;-webkit-filter: blur(3px); filter: blur(3px);overflow: hidden;"></view>
+  <view class="header">
+    <!-- 标题 -->
+    <view class="biaoti" style="padding-top:{{barheight}}px;">
+      <view class="biaoti_left" bindtap="goIndex">
+        <image class="biaoti_img" src="/assets/images/left.png" mode="aspectFit"></image>
+      </view>
+      <view class="biaoto_right">个人中心</view>
+    </view>
+    <!-- 个人信息 -->
+    <view class="person">
+      <view class="person_left">
+        <image class="person_left_img" src="/assets/images/none-user.png" mode="aspectFill"></image>
+      </view>
+      <view class="person_right">
+        <view class="name">未登录</view>
+        <view class="number" bindtap="goLogs">
+          点击登录账号
+          <!-- <image class="number_img" src="/assets/images/edit.png" mode="aspectFit" bindtap="show"></image> -->
+        </view>
+        <view class="type">微信未绑定</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="number" >
+  213123123232131
+  <image class="number_img" src="/assets/images/edit.png" mode="aspectFit" bindtap="show"></image>
+</view>
+ -->
+
+
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="../wallet/wallet" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;padding-left: 66rpx">
+    <view class="weui-cell__hd">
+      <image src="/assets/images/qianbao.png" style="margin-right: 10rpx;vertical-align: bottom;width:42rpx; height: 50rpx;padding-right:10rpx;"></image>
+    </view>
+    <view class="weui-cell__bd">我的钱包</view>
+    <view class="weui-cell__ft">
+      <image class="right_icon" src="/assets/images/right.png" mode="aspectFit"></image>
+    </view>
+  </navigator>
+  <navigator url="../order/order" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;padding-left: 66rpx">
+    <view class="weui-cell__hd">
+      <image src="/assets/images/dingdan.png" style="margin-right: 10rpx;vertical-align: bottom;width:38rpx; height: 48rpx;padding-right:10rpx;"></image>
+    </view>
+    <view class="weui-cell__bd" style="padding-left: 10rpx;">我的订单</view>
+    <view class="weui-cell__ft">
+      <image class="right_icon" src="/assets/images/right.png" mode="aspectFit"></image>
+    </view>
+  </navigator>
+</view>
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="../coupon/coupon" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;padding-left: 66rpx">
+    <view class="weui-cell__hd">
+      <image src="/assets/images/youhuiquan.png" style="margin-right: 10rpx;vertical-align: bottom;width:44rpx; height: 34rpx;padding-right:10rpx;"></image>
+    </view>
+    <view class="weui-cell__bd" style="padding-top: 8rpx;">优惠券</view>
+    <view class="weui-cell__ft">
+      <image class="right_icon" src="/assets/images/right.png" mode="aspectFit"></image>
+    </view>
+  </navigator>
+  <navigator class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;padding-left: 66rpx" bindtap="goNengliang">
+    <view class="weui-cell__hd">
+      <image src="/assets/images/jifen.png" style="margin-right: 10rpx;vertical-align: bottom;width:46rpx; height: 50rpx;padding-right:10rpx;"></image>
+    </view>
+    <view class="weui-cell__bd">能量商城</view>
+    <view class="weui-cell__ft">
+      <image class="right_icon" src="/assets/images/right.png" mode="aspectFit"></image>
+    </view>
+  </navigator>
+</view>
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="../help-center/help-center" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;padding-left: 66rpx">
+    <view class="weui-cell__hd">
+      <image src="/assets/images/bangzhu.png" style="margin-right: 10rpx;vertical-align: bottom;width:44rpx; height: 40rpx;padding-right:10rpx;"></image>
+    </view>
+    <view class="weui-cell__bd">帮助中心</view>
+    <view class="weui-cell__ft">
+      <image class="right_icon" src="/assets/images/right.png" mode="aspectFit"></image>
+    </view>
+  </navigator>
+</view>
+<view class="{{flag?'mask':''}}"></view>
+<!-- 更改手机号 -->
+<view class="edit_phone {{flag?'displayblock':'displaynone'}}">
+  <view class="edit_phone_close">
+    <view class="edit_phone_title">更改手机号</view>
+    <image bindtap="conceal" class="close_img" src="/assets/images/close.png" mode="aspectFit"></image>
+  </view>
+  <view class="edit_input">
+    <input class="weui-input" type="number" placeholder="输入手机号" />
+  </view>
+  <view class="edit_input">
+    <input class="weui-input" style="width:50%;" type="number" placeholder="输入验证码" />
+    <view class="yanzhengma">获取验证码</view>
+  </view>
+  <view class="button-sp-area">
+    <button bindtap="conceal" class="weui-btn edit_btn" plain="true">确认更改</button>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+/* pages/share/share.wxss */
+
+.img {
+    margin: 0 16rpx;
+    /* background-color: #393942; */
+    display: flex;
+}
+.img_img {
+    width: 100%;
+}
+
+
+.button-sp-area {
+    margin: 0 auto;
+    padding-top: 30rpx;
+    width: 80%;
+    position: fixed;
+    z-index: 999;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.queren {
+    font-size: 28rpx;
+    color: #6C6D6E;
+    text-align: center;
+    padding-top: 20rpx;
+}
+.xieyi {
+    color: #F27400;
+}

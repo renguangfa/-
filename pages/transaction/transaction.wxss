@@ -1,0 +1,52 @@
+/* pages/transaction/transaction.wxss */
+
+.title {
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    background-color: #1B1B22;
+    padding: 0 40rpx;
+    color: #6C6D6E;
+}
+
+.list {
+    padding: 0 40rpx;
+    background-color: #393942;
+    height: 126rpx;
+    position: relative;
+    top: -2rpx;
+    border: 2rpx solid #393942;
+}
+
+.list_left {
+    float: left;
+}
+
+.list_left_title {
+    font-size: 32rpx;
+    padding-top: 20rpx;
+}
+
+.list_left_time {
+    color: #AAAAAA;
+    font-size: 24rpx;
+    padding-top: 10rpx;
+}
+
+.list_right {
+    float: right;
+    font-size: 48rpx;
+    color: #F27400;
+    line-height: 126rpx;
+
+}
+
+.kong_title {
+    padding-top: 200rpx;
+    padding-bottom: 60rpx;
+}
+
+.i {
+    position: relative;
+    height: 100%;
+}

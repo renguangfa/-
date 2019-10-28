@@ -1,0 +1,21 @@
+<view wx:if="{{canIUse}}">
+  <view class='header'>
+    <image src='/images/wx_login.png'></image>
+  </view>
+
+  <view class='content'>
+    <view>申请获取以下权限</view>
+    <text wx:if="{{shoujihao==0}}">获得你的公开信息(昵称，头像等)</text>
+    <text wx:if="{{shoujihao==1}}">获得你的手机号</text>
+  </view>
+
+  <button wx:if="{{shoujihao==0}}" class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+    授权登录
+  </button>
+  <button wx:if="{{shoujihao==1}}" class='bottom' type='primary' lang="zh_CN" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">
+    获取用户手机号
+  </button>
+
+</view>
+
+<view wx:else>请升级微信版本</view>

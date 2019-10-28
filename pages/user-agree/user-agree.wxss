@@ -1,0 +1,24 @@
+/* pages/user-agree/user-agree.wxss */
+.title {
+    font-size: 38rpx;
+    color: #F27400;
+    text-align: center;
+}
+.cont {
+    padding: 0 76rpx;
+    padding-right: 98rpx;
+}
+.cont_title {
+    font-size: 36rpx;
+    padding-top: 30rpx;
+    padding-bottom: 20rpx;
+}
+.cont_list {
+    font-size: 30rpx;
+    color: #aaaaaa;
+}
+.cont_list_title {
+    padding: 30rpx 0;
+    font-size: 30rpx;
+    color: #aaaaaa;
+}

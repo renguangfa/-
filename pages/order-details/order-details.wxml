@@ -1,0 +1,118 @@
+<!-- pages/order-details/order-details.wxml -->
+
+    <!-- 完成 SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+    <view class="wancheng" wx:if="{{orderSetailArr.order_status==2}}">
+        <view class="title">已完成</view>
+        <viwe class="title_fu">感谢使用共享充电宝</viwe>
+        <view class="button-sp-area">
+            <button class="weui-btn use_btn" plain="true">再次使用</button>
+        </view>
+        <view class="title_line">订单细节</view>
+        <!-- 内容 -->
+        <view class="content">
+            <view class="cont_list">
+                <view class="list">
+                    <view class="list_left w50">
+                        <view class="list_title">使用时长</view>
+                        <view class="list_cont">{{orderSetailArr.rental_time}}</view>
+                    </view>
+                    <view class="list_left w50">
+                        <view class="list_title">实付金额</view>
+                        <view class="list_cont">{{orderSetailArr.pay_money}}元</view>
+                    </view>
+                    <view style="clear:both;"></view>
+                </view>
+                <view class="list">
+                    <view class="list_left w50">
+                        <view class="list_title">机位地点</view>
+                        <view class="list_cont">综合楼1F</view>
+                    </view>
+                    <view class="list_left w50">
+                        <view class="list_title">充电宝SN</view>
+                        <view class="list_cont">{{orderSetailArr.device_name}}</view>
+                    </view>
+                    <view style="clear:both;"></view>
+                </view>
+                <view class="list">
+                    <view class="list_title">下单时间:</view>
+                    <view class="list_cont font_14">{{orderSetailArr.start_time}}</view>
+                </view>
+                <view class="list">
+                    <view class="list_title">归还时间:</view>
+                    <view class="list_cont font_14">{{orderSetailArr.end_time}}</view>
+                </view>
+                <view class="list">
+                    <view class="list_left w70">
+                        <view class="list_title">订单编号:</view>
+                        <view class="list_cont font_14">{{orderSetailArr.order_sn}}</view>
+                    </view>
+                    <view class="list_left">
+                        <view class="fuzhi font_14">复制</view>
+                    </view>
+                    <view style="clear:both;"></view>
+                </view>
+                <view class="list list_last">
+                    <view class="list_title">计费规则:</view>
+                    <view class="list_footer font_14">归还时按2元/小时计算，微信自动扣款，每24小时封顶30元，单次使用封顶99元</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 进行中 SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS -->
+     <view class="wancheng" wx:if="{{orderSetailArr.order_status==1}}">
+        <view class="shiyong_title">使用中...</view>
+        <viwe class="title_fu">使用完毕要记得及时归还哦</viwe>
+        <view class="button-sp-area">
+            <button class="weui-btn huan_btn" plain="true">归还指南</button>
+        </view>
+        <view class="title_line">订单细节</view>
+        <!-- 内容 -->
+        <view class="content">
+            <view class="cont_list">
+                <view class="list">
+                    <view class="list_left w50">
+                        <view class="list_title">使用时长</view>
+                        <view class="list_cont">计时中...</view>
+                    </view>
+                    <view class="list_left w50">
+                        <view class="list_title">实付金额</view>
+                        <view class="list_cont">计费中...</view>
+                    </view>
+                    <view style="clear:both;"></view>
+                </view>
+                <view class="list">
+                    <view class="list_left w50">
+                        <view class="list_title">机位地点</view>
+                        <view class="list_cont">综合楼1F</view>
+                    </view>
+                    <view class="list_left w50">
+                        <view class="list_title">充电宝SN</view>
+                        <view class="list_cont">{{orderSetailArr.device_name}}</view>
+                    </view>
+                    <view style="clear:both;"></view>
+                </view>
+                <view class="list">
+                    <view class="list_title">下单时间:</view>
+                    <view class="list_cont font_14">{{orderSetailArr.start_time}}</view>
+                </view>
+                <view class="list">
+                    <view class="list_title">归还时间:</view>
+                    <view class="list_cont font_14">{{orderSetailArr.end_time}}</view>
+                </view>
+                <view class="list">
+                    <view class="list_left w70">
+                        <view class="list_title">订单编号:</view>
+                        <view class="list_cont font_14">{{orderSetailArr.order_sn}}</view>
+                    </view>
+                    <view class="list_left">
+                        <view class="fuzhi font_14">复制</view>
+                    </view>
+                    <view style="clear:both;"></view>
+                </view>
+                <view class="list list_last">
+                    <view class="list_title">计费规则:</view>
+                    <view class="list_footer font_14">归还时按2元/小时计算，微信自动扣款，每24小时封顶30元，单次使用封顶99元</view>
+                </view>
+            </view>
+        </view>
+    </view>

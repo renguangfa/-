@@ -1,0 +1,170 @@
+/* pages/coupon/coupon.wxss */
+.duihuan {
+  padding-left: 24rpx;
+  display: flex;
+  height: 88rpx;
+}
+
+.duihuan_left {
+  border: 1px solid #6C6D6E;
+  border-radius: 50rpx;
+  flex: 5;
+  padding-left: 40rpx;
+}
+
+.weui-input {
+  height: 88rpx !important;
+}
+
+.duihuan_right {
+  flex: 1;
+  margin: 10rpx 24rpx;
+  line-height: 68rpx;
+  background-color: #F27400;
+  border-radius: 20rpx;
+  font-size: 36rpx;
+  text-align: center;
+}
+
+/* 充电优惠券  商家优惠券  */
+
+
+.weui-navbar__title {
+  font-size: 32rpx;
+
+}
+
+.weui-navbar {
+  background-color: #1B1B22 !important;
+  border: none !important;
+}
+
+.page {
+  margin-top: 40rpx;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #F27400;
+}
+
+.weui-navbar__slider {
+  background-color: #F27400;
+  width: 3rem !important;
+  height: 1px !important;
+}
+
+.weui-tab__panel {
+  padding-top: 65px !important;
+}
+
+.weui-navbar__item {
+  padding-bottom: 22rpx !important;
+}
+
+.weui-tab__content {
+  padding: 0 24rpx;
+}
+
+
+.quan_list {
+  display: flex;
+  background-color: #393942;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+
+}
+
+.quan_list_left {
+  flex: 3;
+  padding: 28rpx 0px 14rpx 60rpx;
+  position: relative;
+  border-right: 1px dashed #707070;
+  /* background-image: linear-gradient(to bottom, #707070 0%, #707070 50%, transparent 50%);
+background-size: 60rpx 1px;
+background-repeat: repeat-x; */
+
+
+}
+
+.quan_list_right {
+  flex: 2;
+}
+
+.quan_list_title {
+  font-size: 38rpx;
+}
+
+.quan_list_cont {
+  color: #F27400;
+  font-size: 24rpx;
+}
+
+.quan_list_qi {
+  color: #6C6D6E;
+  font-size: 24rpx;
+}
+
+.quan_list_time {
+  color: #aaa;
+  font-size: 28rpx;
+}
+
+.quan_list_yuan {
+  background-color: #1B1B22;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: -35rpx;
+}
+
+
+
+
+.price {
+  color: #4CA8E2;
+  text-align: center;
+  font-size: 80rpx;
+  padding-top: 14rpx;
+}
+
+.small_yuan {
+  font-size: 30rpx;
+}
+
+.gouse {
+  border-radius: 52rpx;
+  background-color: #f27400;
+  height: 60rpx;
+  /* width: 142rpx; */
+  text-align: center;
+  line-height: 60rpx;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  font-size: 28rpx;
+}
+
+.kong_flex {
+  display: flex;
+  margin-top: 30rpx;
+}
+.getquan {
+  font-size: 28rpx;
+  width: 142rpx;
+  height: 66rpx;
+  text-align: center;
+  line-height: 66rpx;
+  background-color: #F27400;
+  border-radius: 52rpx;
+  margin-left: 30rpx;
+}
+.kong_title {
+  padding-left: 25%;
+  height: 66rpx;
+  line-height: 66rpx;
+}

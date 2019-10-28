@@ -1,0 +1,29 @@
+<!-- pages/recharge/recharge.wxml -->
+<view class="title">请选择充值金额</view>
+<!-- 充值金额选择 -->
+<view class="content">
+    <view class="lsit {{btnIndex==index?'active':''}}" bindtap="selectBtn" data-index="{{index}}" wx:for="{{btn}}" wx:for-item="item" wx:for-index="index">
+        {{item}}元
+    </view>
+</view>
+<view class="weixin">
+    <image class="weixin_img" src="/assets/images/weixin.png" mode="aspectFit"></image>
+    微信支付
+</view>
+<view class="weui-cells weui-cells_after-title">
+    <navigator url="../choose-coupon/choose-coupon" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;">
+        <view class="weui-cell__hd"></view>
+        <view class="weui-cell__bd">
+            <!-- 已选择：充电补贴 2元 -->
+            当前为可用的优惠券
+        </view>
+        <view class="weui-cell__ft">
+            优惠券抵扣
+            <image class="" src="/assets/images/right.png" mode="aspectFit" style="padding-left:8rpx;margin-right: 10rpx;vertical-align: middle;width:18rpx; height: 30rpx;"></image>
+        </view>
+    </navigator>
+</view>
+<!-- 确认充值按钮 -->
+<view class="button-sp-area">
+    <button class="weui-btn btnbottom"  plain="true">确认充值</button>
+</view>

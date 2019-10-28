@@ -1,0 +1,109 @@
+/* pages/order-details/order-details.wxss */
+
+.title {
+    font-size: 56rpx;
+    padding: 0 42rpx;
+    color: #4CA8E2;
+}
+.shiyong_title {
+    font-size: 56rpx;
+    padding: 0 42rpx;
+    color: #F27400;
+}
+
+.title_fu {
+    font-size: 28rpx;
+    padding: 0 50rpx;
+    color: #AAAAAA;
+}
+
+.button-sp-area {
+    margin: 0 auto;
+    padding-top: 30rpx;
+    padding: 0 30rpx;
+    margin-top: 50rpx;
+    margin-bottom: 20rpx;
+}
+
+.use_btn {
+    border-radius: 52rpx;
+    height: 104rpx;
+    line-height: 104rpx;
+    color: #fff!important;
+    background-color: #F27400!important;
+}
+.huan_btn {
+    border-radius: 52rpx;
+    height: 104rpx;
+    line-height: 104rpx;
+    color: #fff!important;
+    background-color: #4CA8E2!important;
+}
+
+.title_line {
+    padding: 0 40rpx;
+    font-size: 36rpx;
+    margin-bottom: 20rpx;
+    color: #AAAAAA;
+    padding-top: 20rpx;
+}
+
+.content {
+    padding: 0 20rpx;
+}
+
+.cont_list {
+    border-radius: 20rpx;
+    background-color: #393942;
+    padding-top: 32rpx;
+}
+
+.list {
+    padding: 14rpx 40rpx 2rpx 40rpx;
+}
+
+.list_title {
+    font-size: 24rpx;
+    color: #6C6D6E;
+}
+
+.font_14 {
+    font-size: 28rpx!important;
+}
+
+.list_cont {
+    font-size: 36rpx;
+    color: #AAAAAA;
+}
+
+.list_left {
+    float: left;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w70 {
+    width: 70%;
+}
+
+.fuzhi {
+    border-radius: 20rpx;
+    position: relative;
+    left: 0rpx;
+    top: 40rpx;
+    width: 100rpx;
+    height: 40rpx;
+    color: #F27400;
+    background-color: #fff;
+    text-align: center;
+
+}
+
+.list_footer {
+    color: #AAAAAA;
+}
+.list_last {
+    padding-bottom: 88rpx;
+}

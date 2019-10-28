@@ -1,0 +1,120 @@
+/* pages/help-center/help-center.wxss */
+
+.zhinan {
+    padding: 0 50rpx;
+    display: flex;
+    margin-top: 40rpx;
+}
+
+.zhinan_btn {
+    border-radius: 20rpx;
+    margin-right: 20rpx;
+    font-size: 32rpx;
+    height: 84rpx;
+    width: 186rpx;
+    text-align: center;
+    line-height: 84rpx;
+   
+
+}
+
+.contet {
+    padding: 0 20rpx;
+    margin-top: 40rpx;
+}
+
+.weui-cells {
+
+    background-color: #393942;
+    border-radius: 40rpx;
+}
+
+.weui-cell__bd {
+    font-size: 32rpx;
+}
+
+.title {
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    color: #AAAAAA;
+    padding-left: 40rpx;
+}
+
+.hidden {
+    display: none
+}
+
+.classname {
+    color: #AAAAAA;
+    font-size: 28rpx;
+    padding: 0rpx 64rpx 20rpx 94rpx;
+    width: 560rpx;
+}
+
+.button-sp-area {
+    margin: 0 auto;
+    padding-top: 106rpx;
+    width: 75%;
+}
+.rotateUp{
+    transform: rotate(180deg);
+  }
+  .down{
+    width: 30rpx;
+    height: 18rpx;
+    right: 30rpx;
+    transition: all .4s ease; 
+  }
+  .zujie {
+    /* margin: 0 16rpx; */
+    /* background-color: #393942; */
+    position: absolute;
+    /* position: fixed; */
+    top: 0%;
+    z-index: 999;
+    height: 1192rpx;
+    width: 634rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.guihuan {
+    /* margin: 0 16rpx; */
+    /* background-color: #393942; */
+    position: absolute;
+    /* position: fixed; */
+    top: 0%;
+    z-index: 999;
+    height: 1192rpx;
+    width: 634rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.img_img {
+    height: 1192rpx;
+    width: 634rpx;
+}
+
+/* 遮罩层 */
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+.displayblock {
+    display: block;
+}
+.displaynone {
+    display: none;
+}
+.displayblock1 {
+    display: block;
+}
+.displaynone1 {
+    display: none;
+}

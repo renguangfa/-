@@ -1,0 +1,195 @@
+.header {
+  display: flex;
+  padding: 20rpx;
+  width: 95%;
+  position: fixed;
+  background-color: #1b1b22;
+  top: 0px;
+  z-index: 999;
+}
+
+.header_left {
+  flex: 2;
+}
+
+.header_right {
+  flex: 7;
+}
+
+.yuan {
+  height: 94rpx;
+  width: 94rpx;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #393942;
+}
+
+.yuan_img {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  margin-top: -40rpx;
+}
+
+.header_right {
+  margin: 10rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 52rpx;
+  font-size: 30rpx;
+  background-color: #f27400;
+  color: #fff;
+}
+
+.content {
+  padding: 0 20rpx;
+  border-radius: 52rpx !important;
+  margin-bottom: 40rpx;
+  margin-top: 144rpx;
+}
+
+.cont_title {
+  background-color: #393942;
+  padding: 20rpx;
+  font-size: 40rpx;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+}
+
+.borra {
+  background-color: #393942;
+  padding: 20rpx;
+  height: 4rpx;
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  margin-bottom: 250rpx;
+}
+
+.cont_list {
+  background-color: #393942;
+  padding: 20rpx;
+  display: flex;
+}
+
+.cont_list_left {
+  flex: 2;
+  padding: 10rpx;
+}
+
+.cont_list_right {
+  flex: 6;
+  position: relative;
+  padding-left: 10rpx;
+}
+
+.contlist_left_img {
+  width: 176rpx;
+  height: 176rpx;
+}
+
+.cont_list_title {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.mi {
+  position: absolute;
+  top: 8rpx;
+  right: 0;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.cont_list_xiangq {
+  font-size: 24rpx;
+  color: #aaa;
+  line-height: 60rpx;
+}
+
+.number {
+  padding-left: 10rpx;
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  position: relative;
+}
+
+.jie {
+  color: #4ca462;
+}
+
+.huan {
+  color: #4ca8e2;
+  padding-left: 74rpx;
+}
+
+.lujing_img {
+  width: 38rpx;
+  height: 38rpx;
+  position: absolute;
+  bottom: 0;
+  right: 20rpx;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+
+.youhuiquan_img {
+  width: 198rpx;
+  height: 192rpx;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 13rpx;
+}
+
+.nengliang_img {
+  width: 152rpx;
+  height: 160rpx;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 13rpx;
+}
+
+.flex {
+  flex: 3;
+  position: relative;
+  padding-bottom: 60rpx;
+}
+
+.saoma_img {
+  width: 248rpx;
+  height: 290rpx;
+  position: relative;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer_title {
+  text-align: center;
+  color: #aaa;
+  position: absolute;
+  font-size: 24rpx;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer_img {
+  position: fixed;
+  width: 100%;
+  height: 194rpx;
+  bottom: 0;
+}

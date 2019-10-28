@@ -1,0 +1,34 @@
+<!-- pages/order-setup/order-setup.wxml -->
+<!-- 创建订单 -->
+<!-- 广告 banner -->
+<view class="binner">
+    <image class="binnerimg" src="/assets/images/binner.png" mode="scaleToFill"></image>
+</view>
+<view class="content">
+    <!-- 图片 -->
+    <view class="shop">
+        <image class="shopimg" src="/assets/images/shop.png" mode="scaleToFill"></image>
+    </view>
+    <view class="lin1">{{deviceInfo.address}}</view>
+    <view class="lin2">充电宝</view>
+    <view class="list">
+        <view class="list_left">押金</view>
+        <view class="list_right">
+        <span class="mianmi">免密支付免押金</span>
+        <span style="text-decoration:line-through;">99元</span>
+        
+        </view>
+        <view style="clear:both;"></view>
+    </view>
+    <view class="list">
+        <view class="list_left">租金</view>
+        <view class="list_right color_f2">{{price}}元/小时</view>
+        <view style="clear:both;"></view>
+    </view>
+    <view class="list">计费标准</view>
+    <view class="jifei">归还时按{{price}}元/小时计算，微信自动扣款，每24小时风封顶30元，单次使用封顶{{deviceInfo.high_price}}元</view>
+</view>
+<view class="button-sp-area">
+    <button  class="weui-btn btnbottom"  plain="true" bindtap="OrderSet">确认租借</button>
+</view>
+<view class="bottom_title">确认租借即同意用户协议</view>

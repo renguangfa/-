@@ -1,0 +1,18 @@
+<!-- pages/user-agree/user-agree.wxml -->
+<!-- 用户协议 -->
+<view class="title">共享充电宝用户协议</view>
+<view class="cont">
+    <view class="cont_title">欢迎使用共享充电宝，请您仔细阅读以下全部内容。</view>
+    <view class="cont_list">如果用户不同意本协议的任意内容，请勿授权使用。</view>
+    <view class="cont_list">如用户通过授权使用共享充电宝，即表示用户与共享充电宝公司达成协议，自愿接受本协议所有内容。</view>
+    <view class="cont_list_title">1.安全第一条</view>
+    <view class="cont_list">如用户通过授权使用共享充电宝，即表示用户与共享充电宝公司达成协议，自愿接受本协议所有内容。</view>
+    <view class="cont_list_title">2.安全第一条</view>
+    <view class="cont_list">如用户通过授权使用共享充电宝，即表示用户与共享充电宝公司达成协议，自愿接受本协议所有内容。</view>
+    <view class="cont_list_title">3.安全第一条</view>
+    <view class="cont_list">如用户通过授权使用共享充电宝，即表示用户与共享充电宝公司达成协议，自愿接受本协议所有内容。</view>
+
+
+
+</view>
+

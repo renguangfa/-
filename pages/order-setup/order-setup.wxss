@@ -1,0 +1,93 @@
+/* pages/order-setup/order-setup.wxss */
+
+.binner {
+    text-align: center;
+    margin-bottom: 20rpx;
+}
+.binnerimg {
+    height: 272rpx;
+    width: 100%;    
+}
+
+.content {
+    position: relative;
+    background-color: #393942;
+    border-radius: 40rpx;
+    margin: 0 20rpx;
+}
+
+.shop {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    margin-left: -70rpx;
+    margin-top: -88rpx;
+}
+.shopimg {
+    width: 136rpx;
+    height: 136rpx;
+}
+
+.lin1 {
+    color: #777;
+    font-size: 30rpx;
+    text-align: center;
+    padding-top: 80rpx;
+}
+
+.lin2 {
+    text-align: center;
+    padding-bottom: 60rpx;
+}
+
+.list {
+    padding: 0 40rpx 0rpx 80rpx;
+}
+
+.list_left {
+    float: left;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 32rpx;
+}
+
+.list_right {
+    float: right;
+    height: 80rpx;
+    font-size: 32rpx;
+    line-height: 80rpx;
+}
+.price {
+    font-size: 32rpx;
+    color: #fff!important;
+}
+.mianmi {
+    font-size: 28rpx;
+    color: #4CA8E2;
+    padding-right: 18rpx;
+    text-decoration:none!important;
+}
+.color_f2 {
+    color: #F27400;
+}
+
+.jifei {
+    color: #aaa;
+    padding: 0 40rpx 0rpx 80rpx;
+    font-size: 28rpx;
+    padding-bottom: 80rpx;
+    margin-top: 12rpx;
+}
+
+.button-sp-area {
+    margin: 0 auto;
+    padding-top: 40rpx;
+    width: 75%;
+}
+
+.bottom_title {
+    color: #6C6D6E;
+    text-align: center;
+    font-size: 28rpx;
+    padding-top: 20rpx;
+}

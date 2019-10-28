@@ -1,0 +1,95 @@
+<!-- pages/help-center/help-center.wxml -->
+<!-- 租借指南  归还指南 -->
+<view class="zhinan">
+    <view class="zhinan_btn" style="background-color: #4CA462;" bindtap="zujie">租借指南</view>
+    <view class="zhinan_btn" style="background-color: #4CA8E2;" bindtap="guihuan">归还指南</view>
+</view>
+<!-- 内容 -->
+<view class="contet">
+    <view class="title">常见问题</view>
+    <view class="weui-cells weui-cells_after-title">
+        <!-- 问题标题1111111111 -->
+        <navigator bindtap="tigger" data-num="1" url="" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;">
+            <view class="weui-cell__hd">
+                <image src="/assets/images/shandian.png" style="margin-right: 10rpx;vertical-align: middle;width:30rpx; height: 30rpx;"></image>
+            </view>
+            <view class="weui-cell__bd">充电宝归还后仍在计费</view>
+            <view class="weui-cell__ft">
+                <image class="right_icon" class="down {{ num == 1 ? 'rotateUp' : ''}}" src="/assets/images/down_hei.png" mode="aspectFit"></image>
+            </view>
+        </navigator>
+        <!-- 隐藏的内容 1111111111111 -->
+        <view class="classname {{num == 1?'':'hidden'}}">
+            请回到小程序首页查看附近可归还地点，前去有仓位的机位地点归还哦，感谢您的使用！
+        </view>
+        <!-- 问题标题 2222222222222222 -->
+        <navigator bindtap="tigger" data-num="2" url="" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;">
+            <view class="weui-cell__hd">
+                <image src="/assets/images/shandian.png" style="margin-right: 10rpx;vertical-align: middle;width:30rpx; height: 30rpx;"></image>
+            </view>
+            <view class="weui-cell__bd">充电宝未弹出</view>
+            <view class="weui-cell__ft">
+                <image class="right_icon" class="down {{ num == 2 ? 'rotateUp' : ''}}" src="/assets/images/down_hei.png" mode="aspectFit"></image>
+            </view>
+        </navigator>
+        <!-- 隐藏的内容 2222222222222222 -->
+        <view class="classname {{num == 2?'':'hidden'}}">
+            请回到小程序首页查看附近可归还地点，前去有仓位的机位地点归还哦，感谢您的使用！
+        </view>
+        <!-- 问题标题 3333333333333 -->
+        <navigator bindtap="tigger" data-num="3" url="" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;">
+            <view class="weui-cell__hd">
+                <image src="/assets/images/shandian.png" style="margin-right: 10rpx;vertical-align: middle;width:30rpx; height: 30rpx;"></image>
+            </view>
+            <view class="weui-cell__bd">无法充电</view>
+            <view class="weui-cell__ft">
+                <image class="right_icon" class="down {{ num == 3 ? 'rotateUp' : ''}}" src="/assets/images/down_hei.png" mode="aspectFit"></image>
+            </view>
+        </navigator>
+        <!-- 隐藏的内容 333333333333333 -->
+        <view class="classname {{num == 3?'':'hidden'}}">
+            请回到小程序首页查看附近可归还地点，前去有仓位的机位地点归还哦，感谢您的使用！
+        </view>
+        <!-- 问题标题 4444444444444444 -->
+        <navigator bindtap="tigger" data-num="4" url="" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;">
+            <view class="weui-cell__hd">
+                <image src="/assets/images/shandian.png" style="margin-right: 10rpx;vertical-align: middle;width:30rpx; height: 30rpx;"></image>
+            </view>
+            <view class="weui-cell__bd">充电宝丢了怎么办</view>
+            <view class="weui-cell__ft">
+                <image class="right_icon" class="down {{ num == 4 ? 'rotateUp' : ''}}" src="/assets/images/down_hei.png" mode="aspectFit"></image>
+            </view>
+        </navigator>
+        <!-- 隐藏的内容 4444444444444 -->
+        <view class="classname {{ num ==4 ?'':'hidden'}}">
+            请回到小程序首页查看附近可归还地点，前去有仓位的机位地点归还哦，感谢您的使用！
+        </view>
+        <!-- 问题标题 555555555555555 -->
+        <navigator bindtap="tigger" data-num="5" url="" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;">
+            <view class="weui-cell__hd">
+                <image src="/assets/images/shandian.png" style="margin-right: 10rpx;vertical-align: middle;width:30rpx; height: 30rpx;"></image>
+            </view>
+            <view class="weui-cell__bd">桩满，无法归还</view>
+            <view class="weui-cell__ft">
+                <image class="right_icon" class="down {{ num == 5 ? 'rotateUp' : ''}}" src="/assets/images/down_hei.png" mode="aspectFit"></image>
+            </view>
+        </navigator>
+        <!-- 隐藏的内容 55555555555 -->
+        <view class="classname {{ num == 5?'':'hidden'}}">
+            请回到小程序首页查看附近可归还地点，前去有仓位的机位地点归还哦，感谢您的使用！
+        </view>
+    </view>
+</view>
+<view class="button-sp-area">
+    <button class="weui-btn btnbottom" plain="true">联系客服</button>
+</view>
+<!-- 租借指南  图片 -->
+<view class="zujie {{flag?'displayblock':'displaynone'}}" bindtap="zujieimg">
+    <image class="img_img" src="/assets/images/zujie.png"></image>
+</view>
+<!-- 归还指南  图片 -->
+<view class="guihuan {{flag1?'displayblock1':'displaynone1'}}" bindtap="guihuanimg">
+    <image class="img_img" src="/assets/images/guihuan.png"></image>
+</view>
+<view class="{{flag?'mask':''}}"  bindtap="zujieimg"></view>
+<view class="{{flag1?'mask':''}}"  bindtap="guihuanimg"></view>

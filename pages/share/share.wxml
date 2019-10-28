@@ -1,0 +1,16 @@
+<!-- pages/share/share.wxml -->
+<!-- 申请使用页面 共享充电宝 -->
+<view class="img">
+    <image class="img_img" style="height:{{imgheight}}px;" src="/assets/images/share.png"></image>
+</view>
+
+<view class="button-sp-area">
+    <button  wx:if="{{shoujihao==0}}" class="weui-btn btnbottom"  open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">申请授权使用</button>
+    <button wx:if="{{shoujihao==1}}" class="weui-btn btnbottom" lang="zh_CN" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">
+    获取用户手机号
+  </button>
+    <view class="queren">
+        确认租借即同意
+        <span class="xieyi" bindtap="goUserAgree">《用户协议》</span>
+    </view>
+</view>

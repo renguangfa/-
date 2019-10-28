@@ -1,0 +1,53 @@
+<!-- pages/wallet/wallet.wxml -->
+<view class="header">
+    <view class="yue">余额</view>
+    <view class="money" wx:if="{{shouquan==0}}">未登录</view>
+    <view wx:if="{{shouquan==1}}" class="money">{{money}}</view>
+    <view class="button-sp-area">
+        <button bindtap="go" class="weui-btn recharge" plain="true">去充值</button>
+    </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;">
+        <view class="weui-cell__bd">
+            押金
+            <span class="yajin_number">0.00</span>
+        </view>
+        <view class="weui-cell__ft">
+            <view class="yajin_btn" bindtap="open">缴纳押金</view>
+        </view>
+    </navigator>
+    <navigator url="../transaction/transaction" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;">
+        <view class="weui-cell__bd">交易明细</view>
+        <view class="weui-cell__ft">
+            <image class="right_icon" src="/assets/images/right.png" mode="aspectFit"></image>
+        </view>
+    </navigator>
+</view>
+<!-- 租借充电宝需先缴纳押金 -->
+<view class="{{display?'mask':''}}"></view>
+<view class="edit_phone {{display ? 'displayblock' : 'displaynone'}}">
+    <view class="edit_phone_close">
+        <view class="edit_phone_title">租借充电宝需先缴纳押金</view>
+        <image bindtap="close" class="close_img" src="/assets/images/close.png" mode="aspectFit"></image>
+    </view>
+    <view class="yajin_price">
+        <span class="price">99</span>元
+    </view>
+    <view class="yajin_switch">
+        
+        <view class="weui-cells weui-cells_after-title" style="background-color: #fff;margin:0px;padding-bottom:20rpx;">
+            <view class="weui-cell weui-cell_switch" style="padding:0px;">
+                <view class="weui-cell__bd" style="font-size:32rpx;color:#4ca8e2;">押金自动退
+                    <view class="cont" style="font-size:24rpx;color:#aaa;">充电结束后押金自动退还</view>
+                </view>
+                <view class="weui-cell__ft">
+                    <switch checked />
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="button-sp-area">
+        <button bindtap="close" class="weui-btn edit_btn" plain="true">确认充值</button>
+    </view>
+</view>

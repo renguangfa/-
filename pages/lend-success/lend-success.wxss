@@ -1,0 +1,103 @@
+/* pages/lend-success/lend-success.wxss */
+
+.success {
+    display: flex;
+    padding: 20rpx 0;
+}
+
+.success_left {
+    flex: 2;
+    padding-left: 30rpx;
+}
+
+.success_left_title {
+    font-size: 56rpx;
+}
+
+.success_left_cont {
+    font-size: 28rpx;
+    color: #AAAAAA;
+    padding-top: 10rpx;
+    width: 392rpx;
+    /* padding-right: 35px; */
+}
+
+.success_right {
+    flex: 1;
+    /* float: right; */
+}
+
+.success_color {
+    color: #4CA8E2;
+}
+
+.fail_color {
+    color: #F27400;
+}
+
+.success_right_img {
+    width: 82rpx;
+    height: 74rpx;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    margin-left: -40rpx;
+}
+
+
+.binner {
+    margin-top: 40rpx;
+}
+
+.binner_img {
+    width: 100%;
+    height: 100px;
+}
+
+.jifei {
+    padding: 0 30rpx;
+    margin-top: 40rpx;
+}
+
+.jifei_title {
+    padding-bottom: 20rpx;
+    font-size: 32rpx;
+    color: #aaa;
+}
+
+.jifei_list_img {
+    width: 30rpx;
+    height: 30rpx;
+    padding-top: 4rpx;
+}
+
+
+.jifei_list {
+    color: #6C6D6E;
+    font-size: 28rpx;
+    margin-bottom: 30rpx;
+    display: flex;
+}
+
+.jifei_list_right {
+    width: 596rpx;
+    padding-left: 10rpx;
+}
+
+.backhome {
+    padding: 0 40rpx;
+    padding-top: 40rpx;
+}
+
+.backhome_btn {
+    border: 2rpx solid #4CA8E2;
+    border-radius: 20rpx;
+    width: 320rpx;
+    height: 104rpx;
+    line-height: 104rpx;
+    text-align: center;
+    float: right;
+    color: #4CA8E2;
+    font-size: 32rpx;
+}

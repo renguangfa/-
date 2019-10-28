@@ -1,0 +1,18 @@
+<!-- pages/transaction/transaction.wxml -->
+<view class="transaction">
+    <view class="title">共{{number}}笔交易</view>
+    <navigator hover-class="none" open-type="navigate" wx:for="{{transactionArr}}" wx:key="{{index}}">
+        <view class="list">
+            <view class="list_left">
+                <view class="list_left_title">押金缴纳</view>
+                <view class="list_left_time">{{item.create_time}}</view>
+            </view>
+            <view class="list_right">{{item.amount}}元</view>
+            <view style="clear:both;"></view>
+        </view>
+    </navigator>
+</view>
+<view class="kong" wx:if="{{transactionArr.length==0}}">
+    <view class="kong_title">当前没有交易明细</view>
+    <image class="kong_img" src="/assets/images/mingxi_kong.png" mode="aspectFit"></image>
+</view>
