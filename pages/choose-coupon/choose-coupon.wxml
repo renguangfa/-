@@ -1,6 +1,6 @@
 <!-- pages/choose-coupon/choose-coupon.wxml -->
 <!-- 钱包中选择优惠券 -->
-<view class="quan_content">
+<!-- <view class="quan_content">
     <view class="quan_title">选择一张优惠券</view>
     <view class="quan_list">
         <view class="quan_list_left">
@@ -28,4 +28,14 @@
             <span class="small_yuan">元</span>
         </view>
     </view>
+</view> -->
+
+<view class="kong" style="padding-top:200rpx;">
+  <image class="kong_img" src="/assets/images/quan_kong.png" mode="widthFix"></image>
+
+</view>
+<view class="kong_flex">
+  您还没有优惠券
+  <!-- <view class="kong_title">您还没有优惠券</view> -->
+  <!-- <view class="getquan">去获取</view> -->
 </view>

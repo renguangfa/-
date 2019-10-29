@@ -38,17 +38,19 @@
 .lin2 {
     text-align: center;
     padding-bottom: 60rpx;
+    font-size: 36rpx;
 }
 
 .list {
     padding: 0 40rpx 0rpx 80rpx;
+    font-size: 36rpx;
 }
 
 .list_left {
     float: left;
     height: 80rpx;
     line-height: 80rpx;
-    font-size: 32rpx;
+    font-size: 36rpx
 }
 
 .list_right {
@@ -76,7 +78,6 @@
     padding: 0 40rpx 0rpx 80rpx;
     font-size: 28rpx;
     padding-bottom: 80rpx;
-    margin-top: 12rpx;
 }
 
 .button-sp-area {

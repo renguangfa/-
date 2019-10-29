@@ -24,6 +24,7 @@ Page({
   },
   onShow: function() {
     this.getorder(); //获取用户id
+    this.getlocation();//获取当前经纬度以及首页充电宝列表
     console.log('我是onShow!!!!')
   },
 
@@ -181,11 +182,17 @@ Page({
                 this.setData({
                   order_status: 2
                 })
+                app.globalData.order_status = 2;
                 console.log("没找到正在进行的订单" + this.data.order_status)
               }else {
                 this.setData({
                   order_status: 1
                 });
+                //找到正在进行的订单的id并赋值
+                app.globalData.order_id = obj[i].id;
+                app.globalData.order_status = 1;
+
+
 
                 console.log("找到了有正在进行的订单" + this.data.order_status)
                 return false;
@@ -328,10 +335,48 @@ Page({
   },
   goMap: function(e) {
     let data = e.currentTarget.dataset;
-    console.log(data)
-    console.log(this.data.guessArr)
-    wx.navigateTo({
-      url: '../map/map?device_id=' + this.data.guessArr[data.index].device_id,
+    // console.log(data)
+    // console.log(this.data.guessArr)
+    // wx.navigateTo({
+    //   url: '../map/map?device_id=' + ,
+    // });
+
+
+
+
+    console.log(this.data.guessArr[data.index].device_id)
+    wx.request({
+      url: app.globalData.domain + 'getonedevice',
+      data: {
+        device_id: this.data.guessArr[data.index].device_id
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: 'POST',
+      success: res => {
+        if (res.statusCode == 200) {
+          // 充电柜信息
+          console.log(res.data)
+          // console.log(res.data.lgt)
+          var lgt = res.data.lgt;
+          var lat = res.data.lat;
+          var name = res.data.name;
+          var address = res.data.address;
+          // console.log(lgt);
+          // console.log(lat);
+          // console.log(name);
+          // console.log(address);
+
+          wx.openLocation({
+            longitude: Number(lgt),
+            latitude: Number(lat),
+            name: name,
+            address: address
+          })
+        }
+
+      }
     });
   },
   // 二维码扫描
@@ -364,19 +409,12 @@ Page({
 
             var pl = res.result
             var a = pl.split('?')[1].split('=')[1]
-            app.globalData.device_id = a
-            console.log('扫描二维码中设备id为=' + app.globalData.device_id)
-
-
-            if (app.globalData.login_type == 2) {
-              wx.navigateTo({
-                url: '../share/share'
-              });
-            } else {
+            app.globalData.device_id = a;
+            console.log('扫描二维码中设备id为=' + app.globalData.device_id);
               wx.navigateTo({
                 url: '../order-setup/order-setup'
               });
-            }
+            
 
 
 
@@ -413,6 +451,13 @@ Page({
       duration: 2000
     })
 
+  },
+  goOrder:function(){
+    var order_id = app.globalData.order_id;
+    console.log(order_id)
+    wx.navigateTo({
+      url: '../order-details/order-details?orderid='+order_id,
+    });
   }
 
 

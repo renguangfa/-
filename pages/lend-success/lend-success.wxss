@@ -3,6 +3,7 @@
 .success {
     display: flex;
     padding: 20rpx 0;
+    padding-top: 60rpx;
 }
 
 .success_left {
@@ -18,7 +19,7 @@
     font-size: 28rpx;
     color: #AAAAAA;
     padding-top: 10rpx;
-    width: 392rpx;
+    /* width: 370rpx; */
     /* padding-right: 35px; */
 }
 

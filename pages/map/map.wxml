@@ -1,5 +1,5 @@
 <!--pages/map/map.wxml-->
-<map   id="map" longitude="{{lgt}}" latitude="{{lat}}" scale="14" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 1800rpx;"></map>
+<!-- <map   id="map" longitude="{{lgt}}" latitude="{{lat}}" scale="14" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 1800rpx;"></map> -->
 <!-- <view class="bottom">
     <view class="bottom_left">
         <view class="bottom_left_line1">综合楼1F（售卖机旁）</view>

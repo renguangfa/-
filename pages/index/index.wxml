@@ -1,65 +1,80 @@
-
 <view class="header" wx:if="{{order_status == 1}}">
-    <view class="header_left" bindtap="goPersonal">
-        <view class="yuan">
-            <image class="yuan_img" src="/assets/images/user.png" mode="aspectFit"></image>
-        </view>
+  <view class="header_left" bindtap="goPersonal">
+    <view class="yuan">
+      <image class="yuan_img" src="/assets/images/user.png" mode="aspectFit"></image>
     </view>
-    <view class="header_right">您有未归还的订单...</view>
+  </view>
+  <view class="header_right" bindtap="goOrder">您有未归还的订单...</view>
 </view>
 
 <view class="header" wx:if="{{order_status == 2}}">
-    <view class="" bindtap="goPersonal">
-        <view class="yuan">
-            <image class="yuan_img" src="/assets/images/user.png" mode="aspectFit"></image>
-        </view>
+  <view class="" bindtap="goPersonal">
+    <view class="yuan">
+      <image class="yuan_img" src="/assets/images/user.png" mode="aspectFit"></image>
     </view>
-   
+  </view>
+
 </view>
+
+
 <!-- 内容页 -->
 <view class="content">
-    <!-- <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点击授权获取用户信息</button> -->
-    <!-- <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">获取用户手机号</button> -->
-  <view>{{show}}</view>
-    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button> -->
+  <!-- <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点击授权获取用户信息</button> -->
+  <!-- <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">获取用户手机号</button> -->
+  <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button> -->
+  <!-- 标题 -->
+  <!-- ios拖动会断掉，加个后面的背景，看着舒服 -->
+  <view class="yincang"></view>
+  <view class="cont_title_arr">
     <view class="cont_title" wx:if="{{order_status == 1}}">附近可归还地点</view>
     <view class="cont_title" wx:if="{{order_status == 2}}">附近可租借地点</view>
 
-<!-- 循环 首页数据 -->
-      <block wx:for="{{guessArr}}" wx:key="{{index}}" >
+  </view>
+
+
+  <!-- 循环 首页数据 -->
+  <view class="const_arr">
+    <scroll-view scroll-y="{{true}}" enable-flex="{{true}}" scroll-anchoring="{{true}}">
+      <block wx:for="{{guessArr}}" wx:key="{{index}}">
         <view class="cont_list" bindtap="goMap" data-index="{{index}}">
-            <view class="cont_list_left">
-                <image class="contlist_left_img" src="/assets/images/index.png" mode="scaleToFill"></image>
+          <view class="cont_list_left">
+            <image class="contlist_left_img" src="/assets/images/index.png" mode="scaleToFill"></image>
+          </view>
+          <view class="cont_list_right">
+            <!-- 区域名称 -->
+            <view class="cont_list_title">{{item.name}}</view>
+            <view class="mi">{{item.dis}}m</view>
+            <!-- 地址 -->
+            <view class="cont_list_xiangq textover">{{item.address}}</view>
+            <view class="number">
+              <span class="jie">可借{{item[0].jie}}</span>
+              <span class="huan">可还{{item[1].huan}}</span>
+              <image class="lujing_img" src="/assets/images/lujing.png" mode="scaleToFill"></image>
             </view>
-            <view class="cont_list_right">
-             <!-- 区域名称 -->
-                <view class="cont_list_title">{{item.name}}</view>  
-                <view class="mi">{{item.dis}}m</view>
-                <!-- 地址 -->
-                <view class="cont_list_xiangq textover">{{item.address}}</view>
-                <view class="number">
-                    <span class="jie">可借{{item[0].jie}}</span>
-                    <span class="huan">可还{{item[1].huan}}</span>
-                    <image class="lujing_img" src="/assets/images/lujing.png" mode="scaleToFill"></image>
-                </view>
-            </view>
+          </view>
         </view>
-    </block>
-    <view class="borra"></view>
+      </block>
+    </scroll-view>
+
+
+  </view>
+
+
+
 </view>
 <!-- 底部固定的三个按钮 -->
 <view class="footer">
-    <image class="footer_img" src="/assets/images/idnexfooter.png" mode="aspectFit"></image>
-    <view class="youhuiquan flex" bindtap="goCoupon">
-        <image class="youhuiquan_img flex_img" src="/assets/images/indexyouhuiquan.png" mode="aspectFit"></image>
-        <view class="footer_title">优惠券</view>
-    </view>
-    <view class="saoma flex" bindtap="goShare">
-        <image class="saoma_img flex_img" src="/assets/images/saoma.png" mode="aspectFit"></image>
-        <view class="footer_title">扫码</view>
-    </view>
-    <view class="youhuiquan flex" bindtap="goNengliang">
-        <image class="nengliang_img flex_img" src="/assets/images/nengliang.png" mode="aspectFit"></image>
-        <view class="footer_title">能量商城</view>
-    </view>
+  <image class="footer_img" src="/assets/images/idnexfooter.png" mode="aspectFit"></image>
+  <view class="youhuiquan flex" bindtap="goCoupon">
+    <image class="youhuiquan_img flex_img" src="/assets/images/indexyouhuiquan.png" mode="aspectFit"></image>
+    <view class="footer_title">优惠券</view>
+  </view>
+  <view class="saoma flex" bindtap="goShare">
+    <image class="saoma_img flex_img" src="/assets/images/saoma.png" mode="aspectFit"></image>
+    <view class="footer_title">扫码</view>
+  </view>
+  <view class="youhuiquan flex" bindtap="goNengliang">
+    <image class="nengliang_img flex_img" src="/assets/images/nengliang.png" mode="aspectFit"></image>
+    <view class="footer_title">能量商城</view>
+  </view>
 </view>

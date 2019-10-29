@@ -1,7 +1,7 @@
 <!-- pages/personal/personal.wxml -->
 <!-- 背景图片 -->
 <view class="{{type?'displayblock':'displaynone'}}">
-  <view class="bgi" style="background: url({{personArr.avatarUrl}}) no-repeat;background-size: cover; height: 400rpx;width: 800rpx;position: absolute;top: 0;left: 0;z-index: -1;-webkit-filter: blur(3px); filter: blur(3px);overflow: hidden;"></view>
+  <view class="bgi" style="background: url({{personArr.avatarUrl}}) no-repeat;background-size: cover; height: 400rpx;width: {{screenWidth}}px;position: absolute;top: 0;left: 0;z-index: -1;-webkit-filter: blur(3px); filter: blur(3px);overflow: hidden;"></view>
   <view class="header">
     <!-- 标题 -->
     <view class="biaoti" style="padding-top:{{barheight}}px;">
@@ -27,7 +27,7 @@
   </view>
 </view>
 <view class="{{type?'displaynone':'displayblock'}}">
-  <view class="bgi" style="background: url(/assets/images/none-user.png) no-repeat;background-size: cover; background-position: center;height: 400rpx;width: 800rpx;position: absolute;top: 0;left: 0;z-index: -1;-webkit-filter: blur(3px); filter: blur(3px);overflow: hidden;"></view>
+  <view class="bgi" style="background: url(/assets/images/none-user.png) no-repeat;background-size: cover; background-position: center;height: 400rpx;width: {{screenWidth}}px;position: absolute;top: 0;left: 0;z-index: -1;-webkit-filter: blur(3px); filter: blur(3px);overflow: hidden;"></view>
   <view class="header">
     <!-- 标题 -->
     <view class="biaoti" style="padding-top:{{barheight}}px;">

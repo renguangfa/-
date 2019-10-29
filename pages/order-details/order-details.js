@@ -27,6 +27,7 @@ Page({
     wx.request({
       url: app.globalData.domain + 'orderfind',
       data:{
+        // this.data.orderid
         id: this.data.orderid
       },
       header: {
@@ -35,7 +36,7 @@ Page({
       method: 'POST',
       success: res => {
         if(res.statusCode == 200){
-          // console.log(res);
+          console.log(res);
 
           this.setData({
             orderSetailArr: res.data
@@ -48,7 +49,66 @@ Page({
     })
 
   },
+// 跳转到帮助中心
+  goCenter: function(){
+    wx.navigateTo({
+      url: '../help-center/help-center',
+    });
+  },
+  // 复制订单编号
+  fuzhi: function(){
+    // console.log(this.data.orderSetailArr.order_sn)
+    wx.setClipboardData({
+      data: this.data.orderSetailArr.order_sn,
+      success(res) {
+        wx.getClipboardData({
+          success(res) {
+            console.log(res.data) // data
+          }
+        })
+      }
+    })
+  },
+  // 再次使用扫码
+  goShare: function () {
+    // console.log(this.data.order_status)
+    // 判断是否有正在使用的订单 ，如果有，就不允许扫码
+    if (app.globalData.order_status == 1) {
+      wx.showToast({
+        title: '您有正在进行中的订单,请先归还充电宝再下单',
+        icon: 'none',
+        mask: true,
+        duration: 2000
+      })
 
+    } else if (app.globalData.order_status == 2) {
+       
+        wx.scanCode({
+          success: (res) => {
+  
+
+            var pl = res.result
+            var a = pl.split('?')[1].split('=')[1]
+            app.globalData.device_id = a
+            console.log('扫描二维码中设备id为=' + app.globalData.device_id)
+
+              wx.navigateTo({
+                url: '../order-setup/order-setup'
+              });
+          },
+          fail: (res) => {
+            wx.showToast({
+              title: '扫码失败',
+              icon: 'none',
+              duration: 2000
+            })
+          },
+          complete: (res) => { }
+        });
+    }
+
+  },
+  
 
   /**
    * 生命周期函数--监听页面初次渲染完成

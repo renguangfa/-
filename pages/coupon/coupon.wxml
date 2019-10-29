@@ -25,11 +25,11 @@
                         <image class="kong_img" src="/assets/images/quan_kong.png" mode="widthFix"></image>
                         
                     </view>
-                    <view class="kong_flex">
-                    您还没有优惠券
+                    <view class="kong_flex">您还没有优惠券</view>
+                    
                         <!-- <view class="kong_title">您还没有优惠券</view> -->
                         <!-- <view class="getquan">去获取</view> -->
-                    </view>
+                    
                     <!-- <view class="quan_list">
                         <view class="quan_list_left">
                             <view class="quan_list_title">充电补贴</view>

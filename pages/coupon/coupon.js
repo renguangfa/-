@@ -1,5 +1,7 @@
 var sliderWidth = 50; // 需要设置slider的宽度，用于计算中间位置
 
+//获取应用实例
+const app = getApp();
 Page({
   data: {
     tabs: ["充电优惠券", "商家优惠券"],
@@ -30,11 +32,22 @@ Page({
     });
   },
   gotoast: function(){
-    wx.showToast({
-      title: '兑换码不正确',
-      icon: 'none',
-      mask: true,
-      duration: 2000
-    })
+    if (app.globalData.shouquanType ==0){
+      wx.showToast({
+        title: '您还未登录，请先进行登录',
+        icon: 'none',
+        mask: true,
+        duration: 2000
+      })
+
+    }else {
+      wx.showToast({
+        title: '兑换码不正确',
+        icon: 'none',
+        mask: true,
+        duration: 2000
+      })
+    }
+    
   }
 });

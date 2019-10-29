@@ -37,7 +37,8 @@ Page({
           this.setData({
             deviceInfo: res.data,
             price: Number(res.data.price)/100
-          })
+          });
+         
           console.log('充电柜的信息' + this.data.deviceInfo);
         }
 
@@ -86,6 +87,8 @@ Page({
                   // app.globalData.lend_type = res.data.data;
                   // console.log(res.data.data);
                   // console.log('app.globalData.lend_type = '+ app.globalData.lend_type);
+                  app.globalData.order_id = res.data.id
+                  
                   wx.reLaunch({
                     url: '../lend-success/lend-success?lend_type=' + res.data.data
                   });

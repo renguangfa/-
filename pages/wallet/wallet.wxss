@@ -4,7 +4,7 @@
 }
 .yue {
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 180rpx;
     font-size: 28rpx;
     color: #AAAAAA;
 }
@@ -39,6 +39,7 @@
 .yajin_number {
     color: #4ca8e2;
     padding-left: 10rpx;
+    text-decoration:line-through;
 }
 .yajin_btn {
     width: 190rpx;
@@ -79,9 +80,9 @@
 
 .button-sp-area{
     margin: 0 auto;
-    padding-top: 15px;
-    width: 64%;
-    padding-bottom: 40rpx;
+    padding-top: 80rpx;
+    width: 45%;
+    padding-bottom: 124rpx;
 }
 .edit_btn {
     height: 84rpx!important;

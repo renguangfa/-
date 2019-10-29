@@ -47,7 +47,7 @@
                 </view>
                 <view class="f_left time_money_left">
                     <image class="time_money_img" src="/assets/images/money.png" mode="aspectFit"></image>
-                    {{item.pay_money}}元
+                    {{item.pay_money/100}}元
                 </view>
             </view>
         </view>
@@ -55,10 +55,10 @@
     <!-- 底部的查看更多订单 -->
 
 </view>
-<view class="footer" wx:if="{{orderList.length!=0}}">
+<!-- <view class="footer" wx:if="{{orderList.length!=0}}">
     查看更多的订单
     <image class="footer_img" src="/assets/images/down.png" mode="aspectFit"></image>
-</view>
+</view> -->
 <view class="kong" wx:if="{{orderList.length==0}}">
     <view class="kong_title">当前没有订单哦</view>
     <image class="kong_img" src="/assets/images/order_kong.png" mode="aspectFit"></image>

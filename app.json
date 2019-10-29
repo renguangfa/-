@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/coupon/coupon",
     "pages/index/index",
+    "pages/order-details/order-details",
+    "pages/lend-success/lend-success",
+    "pages/coupon/coupon",
     "pages/share/share",
     "pages/logs/logs",
     "pages/personal/personal",
@@ -13,9 +15,7 @@
     "pages/recharge/recharge",
     "pages/choose-coupon/choose-coupon",
     "pages/user-agree/user-agree",
-    "pages/map/map",
-    "pages/lend-success/lend-success",
-    "pages/order-details/order-details"
+    "pages/map/map"
     
     
   ],
@@ -23,7 +23,11 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1B1B22",
     "navigationBarTitleText": "共享充电宝",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColorTop":"#1B1B22",
+    "backgroundColorBottom":"#1B1B22",
+    "backgroundColor":"#1B1B22",
+    "enablePullDownRefresh":false
   },
   "sitemapLocation": "sitemap.json",
   "permission": {

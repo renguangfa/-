@@ -6,7 +6,7 @@
         <view class="success_left_cont">感谢使用共享充电宝</view>
     </view>
     <view class="success_right">
-        <image class="success_right_img" src="/assets/images/lend_success.png" mode="scaleToFill"></image>
+        <image bindtap="goCenter" class="success_right_img" src="/assets/images/lend_success.png" mode="scaleToFill"></image>
     </view>
     <view style="clear:both;"></view>
 </view>
@@ -14,10 +14,11 @@
 <view class="success" wx:if="{{lend_type == 0}}">
     <view class="success_left">
         <view class="success_left_title fail_color">弹出失败</view>
-        <view class="success_left_cont">请重新扫码或前往附近机位重试此订单将自动结束</view>
+        <view class="success_left_cont">请重新扫码或前往附近机位重试</view> <view class="success_left_cont">此订单将自动结束</view> 
+        
     </view>
     <view class="success_right">
-        <image class="success_right_img" src="/assets/images/lend_fail.png" mode="scaleToFill"></image>
+        <image bindtap="goShare" class="success_right_img" src="/assets/images/lend_fail.png" mode="scaleToFill"></image>
     </view>
     <view style="clear:both;"></view>
 </view>

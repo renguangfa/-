@@ -4,11 +4,13 @@
     font-size: 56rpx;
     padding: 0 42rpx;
     color: #4CA8E2;
+    padding-top: 60rpx;
 }
 .shiyong_title {
     font-size: 56rpx;
     padding: 0 42rpx;
     color: #F27400;
+    padding-top: 60rpx;
 }
 
 .title_fu {
@@ -50,6 +52,7 @@
 
 .content {
     padding: 0 20rpx;
+    margin-bottom: 80rpx;
 }
 
 .cont_list {
@@ -59,7 +62,7 @@
 }
 
 .list {
-    padding: 14rpx 40rpx 2rpx 40rpx;
+    padding: 14rpx 40rpx 2rpx 30rpx;
 }
 
 .list_title {
@@ -92,7 +95,7 @@
     border-radius: 20rpx;
     position: relative;
     left: 0rpx;
-    top: 40rpx;
+    top: 42rpx;
     width: 100rpx;
     height: 40rpx;
     color: #F27400;
@@ -106,4 +109,5 @@
 }
 .list_last {
     padding-bottom: 88rpx;
+    
 }

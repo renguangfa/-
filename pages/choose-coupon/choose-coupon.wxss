@@ -74,3 +74,9 @@ background-repeat: repeat-x; */
     font-size: 30rpx;
 }
 
+.kong_flex {
+  /* display: flex; */
+  margin-top: 30rpx;
+  text-align: center;
+  color: #AAAAAA;
+}

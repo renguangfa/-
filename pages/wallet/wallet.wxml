@@ -14,7 +14,8 @@
             <span class="yajin_number">0.00</span>
         </view>
         <view class="weui-cell__ft">
-            <view class="yajin_btn" bindtap="open">缴纳押金</view>
+        <view style="color: #4ca8e2;padding-right:20rpx;">免押金</view>
+            <!-- <view class="yajin_btn" bindtap="open">缴纳押金</view> -->
         </view>
     </navigator>
     <navigator url="../transaction/transaction" class="weui-cell weui-cell_access" hover-class="none" style="height:80rpx;">

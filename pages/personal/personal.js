@@ -11,7 +11,8 @@ Page({
     flag: false,
     type: true,
     personArr: [] , //个人信息
-    phoneNumber: app.globalData.phonenumber
+    phoneNumber: app.globalData.phonenumber,
+    screenWidth:0  //获取设备宽度
 
   },
 
@@ -26,10 +27,13 @@ Page({
     wx.getSystemInfo({
       success: (res) => {
         console.log(res.statusBarHeight)
+        console.log(res.screenWidth)
         var barheight = this.data.barheight;
+        var screenWidth = this.data.screenWidth;
 
         this.setData({
-          barheight: res.statusBarHeight + 10
+          barheight: res.statusBarHeight + 10,
+          screenWidth: res.screenWidth
         });
         console.log(this.data.barheight)
       }

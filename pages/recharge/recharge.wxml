@@ -15,7 +15,7 @@
         <view class="weui-cell__hd"></view>
         <view class="weui-cell__bd">
             <!-- 已选择：充电补贴 2元 -->
-            当前为可用的优惠券
+            当前无可用的优惠券
         </view>
         <view class="weui-cell__ft">
             优惠券抵扣

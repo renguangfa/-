@@ -8,7 +8,8 @@ Page({
    */
   data: {
     transactionArr:[],
-    number:0
+    number:0,
+    pirce:0
   },
 
   /**
@@ -31,7 +32,9 @@ Page({
       method: 'POST',
       success:res => {
         if(res.statusCode == 200){
-          // console.log(res);
+          console.log(res);
+          
+
 // 给自己定义的 transactionArr 赋值
           this.setData({
             transactionArr: res.data.data.data,

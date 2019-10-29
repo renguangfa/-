@@ -2,12 +2,20 @@
 <view class="transaction">
     <view class="title">共{{number}}笔交易</view>
     <navigator hover-class="none" open-type="navigate" wx:for="{{transactionArr}}" wx:key="{{index}}">
-        <view class="list">
-            <view class="list_left">
-                <view class="list_left_title">押金缴纳</view>
+        <view class="list" wx:if="{{item.type==1}}">
+            <view class="list_left"  >
+                <view class="list_left_title">消费</view>
                 <view class="list_left_time">{{item.create_time}}</view>
             </view>
-            <view class="list_right">{{item.amount}}元</view>
+            <view class="list_right">-{{item.amount/100}}元</view>
+            <view style="clear:both;"></view>
+        </view>
+        <view class="list" wx:if="{{item.type==2}}">
+            <view class="list_left">
+                <view class="list_left_title">充值</view>
+                <view class="list_left_time">{{item.create_time}}</view>
+            </view>
+            <view class="list_right">-{{item.amount/100}}元</view>
             <view style="clear:both;"></view>
         </view>
     </navigator>

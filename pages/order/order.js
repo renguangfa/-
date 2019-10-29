@@ -7,7 +7,8 @@ Page({
    */
   data: {
     orderList: [],
-    orderid: ''
+    orderid: '',
+    order_status:1    //订单状态  1为使用中 2为已完成
 
   },
 
@@ -33,10 +34,19 @@ Page({
         success: res => {
           if (res.statusCode == 200) {
             // console.log('uid'+app.globalData.userid);
+            if (res.data.data.order_status == 1){
+              this.setData({
+                orderList: res.data.data,
+                order_status:1
+              })
+            }else {
+              this.setData({
+                orderList: res.data.data,
+                order_status: 2
+              })
+            }
 
-            this.setData({
-              orderList: res.data.data
-            })
+            
             console.log(this.data.orderList);
           }
 

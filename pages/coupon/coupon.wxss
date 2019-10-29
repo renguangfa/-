@@ -150,8 +150,10 @@ background-repeat: repeat-x; */
 }
 
 .kong_flex {
-  display: flex;
+  /* display: flex; */
   margin-top: 30rpx;
+  text-align: center;
+  color: #AAAAAA;
 }
 .getquan {
   font-size: 28rpx;
