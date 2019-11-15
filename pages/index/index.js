@@ -19,19 +19,21 @@ Page({
     order_status: 2, //订单状态 1、未支付 2、已支付
     orderList: [],
     openid: '',
-    shouquan: 0
+    shouquan: 0,
+    options: '' //从外面扫进来的参数
 
   },
   onShow: function() {
     this.getorder(); //获取用户id
-    this.getlocation();//获取当前经纬度以及首页充电宝列表
+    this.getlocation(); //获取当前经纬度以及首页充电宝列表
     console.log('我是onShow!!!!')
   },
 
 
-  onLoad: function() {
+  onLoad: function(options) {
+    console.log('onload');
     this.getlocation(); //获取当前的经纬度
-    
+
 
 
     wx.getSetting({
@@ -61,12 +63,81 @@ Page({
           });
         }
       }
-    })
+    });
+
+    // 从外面扫码进入
+    let that = this;
+    // options = 'C101904003242';
+    var b = (JSON.stringify(options) == "{}"); //判断onload传的参是否为空  如果为空那就等等于{},返回true 
+    console.log(b) //true  
+    //  从外面扫码直接进入到里面进
+
+    // console.log(options)
+    if (!b) { //如果等于false 也就是onload传的参为空
+
+    var a = options.split('?')[1].split('=')[1]
+      app.globalData.device_id = a;
+      app.globalData.options = a; 
+      console.log(app.globalData.options)
+      console.log(options)
+      wx.navigateTo({
+        url: '../order-setup/order-setup'
+      });
 
 
-    // 获取用户信息
+      // var a = options.split('?')[1].split('=')[1]
 
 
+
+
+      // 从外面进入
+
+
+      // setTimeout(function () {
+      // var that = this;
+      // console.log(123);
+      // console.log(that.data.shouquan);
+      // if (that.data.shouquan == 0) { //没有授权跳到授权页面
+
+      //   // var a = options.split('?')[1].split('=')[1]
+
+      //   app.globalData.device_id = 'C101904003242';
+      //   console.log('扫描二维码中设备id为=' + app.globalData.device_id);
+      //   wx.navigateTo({
+      //     url: '../share/share',
+      //   });
+      //   console.log("~~~~~~~~~~~~~~~~~~~~~~~")
+      // } else {
+      //   // 判断是否有正在使用的订单 ，如果有，就不允许扫码
+      //   if (that.data.order_status == 1) {
+      //     wx.showToast({
+      //       title: '您有正在进行中的订单,请先归还充电宝再下单',
+      //       icon: 'none',
+      //       mask: true,
+      //       duration: 2000
+      //     })
+
+      //   } else if (that.data.order_status == 2) {
+      //     // console.log(options);
+
+      //     // var a = options.split('?')[1].split('=')[1]
+      //     app.globalData.device_id = 'C101904003242';
+      //     console.log('扫描二维码中设备id为=' + app.globalData.device_id);
+      //     wx.navigateTo({
+      //       url: '../order-setup/order-setup'
+      //     });
+      //   }
+
+      // }
+
+      // }, 4000);
+
+
+
+
+
+
+    }
   },
   // 获取用户的id 因为index.js先加载，获取不到userid 判断app.globalData.openid中是否已有，设置回调，有就获取userid，没有等会在获取userid
   getUserId: function() {
@@ -113,7 +184,7 @@ Page({
           app.globalData.nickName = res.data.data.nickName;
           app.globalData.avatarUrl = res.data.data.avatarUrl;
 
-          console.log('userid', app.globalData.userid);
+          // console.log('userid: '+JSON.stringify(res.data));
           // console.log('userid', res);
           // 获取订单列表
           // console.log(this.data.shouquan+'========2eqweqweqwe!~~~~~~~~~~~~!~~~~~~~~~~~~~~~~~~!~~~~~~~~~~')
@@ -153,7 +224,7 @@ Page({
 
           // 如果没有订单就直接不判断。默认没有正在使用中的订单
           if (length != 0) {
-            
+
             // let orderListSet = res.data.data.map((v) => {
             //   console.log(v)
             //   if(v.order_status ==1){
@@ -184,7 +255,7 @@ Page({
                 })
                 app.globalData.order_status = 2;
                 console.log("没找到正在进行的订单" + this.data.order_status)
-              }else {
+              } else {
                 this.setData({
                   order_status: 1
                 });
@@ -195,13 +266,13 @@ Page({
 
 
                 console.log("找到了有正在进行的订单" + this.data.order_status)
-                return false;
+                break;
               }
             }
           };
 
-          console.log('我的订单' + this.data.orderList);
 
+          console.log('我的订单' + this.data.orderList);
 
         }
 
@@ -211,22 +282,24 @@ Page({
 
   },
 
+
+
   // 获取当前的经纬度
   getlocation() {
     wx.getLocation({
       type: 'wgs84',
       altitude: true,
       success: res => {
-        const latitude = res.latitude;
-        const longitude = res.longitude;
+        let latitude = res.latitude;
+        let longitude = res.longitude;
         this.setData({
           latitude: res.latitude,
           longitude: res.longitude
         });
         app.globalData.lat = res.latitude,
-          app.globalData.long = res.longitude
+        app.globalData.long = res.longitude
         console.log('long' + app.globalData.long)
-        console.log('lat' + app.globalData.long);
+        console.log('lat' + app.globalData.lat);
         this.getIndexArr(latitude, longitude) //获取首页充电宝列表
 
       },
@@ -246,11 +319,11 @@ Page({
       method: 'POST',
       success: res => {
         if (res.statusCode == 200) {
-          console.log(res);
           // 添加一个新的属性 距离dis = 人和商店的距离
 
           // 获取经维护数组 从 guessArr获取
           // map是一个新的方法，来拿新的数组
+          // lat,lgt
           let disArr = res.data.data.map((v) => {
             return {
               latitude: Number(v.lat),
@@ -258,8 +331,9 @@ Page({
             };
 
           });
-          console.log('disArr=', disArr)
+
           // 调用腾旭地图
+          console.log('disArr', disArr);
           demo.calculateDistance({
             from: {
               // 已经接收的值
@@ -268,9 +342,9 @@ Page({
             },
 
             to: disArr,
-            //  [{
-            //   latitude: 31.95,
-            //   longitude: 118.85
+            // to: [{
+            //     latitude: 32.008367,
+            //     longitude: 118.759166
             // }, {
             //   latitude: 31.95,
             //   longitude: 118.85
@@ -284,8 +358,13 @@ Page({
               if (result.status == 0) {
 
                 let guessArr = res.data.data.map((v, i) => {
-                  v.dis = result.result.elements[i].distance;
-                  return v;
+                  if (result.result.elements[i].distance >= 1000) {
+                    v.dis = Number(result.result.elements[i].distance / 1000) + 'km';
+                    return v;
+                  } else {
+                    v.dis = Number(result.result.elements[i].distance) + 'm';
+                    return v;
+                  }
 
                 });
                 console.log(guessArr)
@@ -392,43 +471,43 @@ Page({
       })
 
     } else if (this.data.order_status == 2) {
-      if (this.data.shouquan == 0) {
-        wx.navigateTo({
-          url: '../share/share',
-        });
-        console.log("~~~~~~~~~~~~~~~~~~~~~~~")
-      } else {
-        var that = this;
-        var show;
-        wx.scanCode({
-          success: (res) => {
-            this.show = "结果:" + res.result + "二维码类型:" + res.scanType + "字符集:" + res.charSet + "路径:" + res.path;
-            // that.setData({
-            //   show: this.show
-            // });
-
-            var pl = res.result
+      wx.scanCode({
+        success: (res) => {
+          if (app.globalData.shouquanType == 0) { //没有授权跳到授权页面
+            var pl = res.path
             var a = pl.split('?')[1].split('=')[1]
             app.globalData.device_id = a;
             console.log('扫描二维码中设备id为=' + app.globalData.device_id);
-              wx.navigateTo({
-                url: '../order-setup/order-setup'
-              });
-            
+            wx.navigateTo({
+              url: '../share/share',
+            });
+            console.log("~~~~~~~~~~~~~~~~~~~~~~~")
+          } else {
+            // that.setData({
+            //   show: this.show
+            // });
+            console.log(res.result);
+            console.log(res.path);
+            var pl = res.path
+            var a = pl.split('?')[1].split('=')[1]
+            app.globalData.device_id = a;
+            console.log('扫描二维码中设备id为=' + app.globalData.device_id);
+            wx.navigateTo({
+              url: '../order-setup/order-setup'
+            });
+          }
 
+        },
+        fail: (res) => {
+          wx.showToast({
+            title: '扫码失败',
+            icon: 'none',
+            duration: 2000
+          })
+        },
+        complete: (res) => {}
+      });
 
-
-          },
-          fail: (res) => {
-            wx.showToast({
-              title: '扫码失败',
-              icon: 'none',
-              duration: 2000
-            })
-          },
-          complete: (res) => {}
-        });
-      }
 
     }
 
@@ -443,7 +522,7 @@ Page({
       url: '../coupon/coupon',
     });
   },
-  goNengliang: function(){
+  goNengliang: function() {
     wx.showToast({
       title: '此功能暂未开放',
       icon: 'none',
@@ -452,11 +531,11 @@ Page({
     })
 
   },
-  goOrder:function(){
+  goOrder: function() {
     var order_id = app.globalData.order_id;
     console.log(order_id)
     wx.navigateTo({
-      url: '../order-details/order-details?orderid='+order_id,
+      url: '../order-details/order-details?orderid=' + order_id,
     });
   }
 

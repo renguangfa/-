@@ -93,7 +93,7 @@
 }
 
 .cont_list:last-child {
-  padding-bottom: 250rpx;
+  padding-bottom: 350rpx!important;
 }
 
 /* .borra {

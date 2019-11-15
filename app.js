@@ -35,7 +35,7 @@ App({
             }
             console.log("openid = " + data.openid);
             this.globalData.login_type = data.type;
-            console.log("是否注册过 1、已注册  2、未注册 = " + this.globalData.login_type);
+            console.log("是否注册过 1、已注册  0、未注册 = " + this.globalData.login_type);
       
           }
         })
@@ -62,13 +62,14 @@ App({
     city: "",
     session_key:"",     //openid中的   用来传给解密手机号接口
     orderList:[],
-    login_type: 0,      //是否登录或者注册 //1、已注册  2、未注册
+    login_type: 2,      //是否登录或者注册 //1、已注册  0、未注册
     device_id: 0  ,     //设备编号
     lat: 0,             //用户的经纬度
     long: 0 ,            //用户的经纬度
     shouquanType: 0,      // 跟我的关联，如果授权就自动获取个人信息，如果没有要自己点击登录账号  0为未授权，1为已授权
     order_id: 0  ,           //首页  您有未归还的订单 中的订单id
-    order_status: 2              //是否有正在进行的订单   1 有 2无
+    order_status: 2  ,            //是否有正在进行的订单   1 有 2无
+    options:''   ,          //从外面扫码进来，产看是否有参数
    
 
   }

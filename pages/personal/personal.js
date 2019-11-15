@@ -85,7 +85,7 @@ Page({
   // 前往获取用户信息以及获取手机号
   goLogs: function(){
     wx.navigateTo({
-      url: '../share/share',
+      url: '../share/share?where='+99,
     });
   },
   goIndex: function() {
@@ -120,14 +120,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+ 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    this.getPersonArr();
   },
 
   /**

@@ -43,7 +43,9 @@
           <view class="cont_list_right">
             <!-- 区域名称 -->
             <view class="cont_list_title">{{item.name}}</view>
-            <view class="mi">{{item.dis}}m</view>
+            
+            <view class="mi">{{item.dis}}</view>
+            <!-- <view class="mi" wx:if="{{{item.dis}}<1">{{item.dis}}m</view> -->
             <!-- 地址 -->
             <view class="cont_list_xiangq textover">{{item.address}}</view>
             <view class="number">

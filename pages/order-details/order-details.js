@@ -85,9 +85,11 @@ Page({
        
         wx.scanCode({
           success: (res) => {
-  
+  console.log(res)
 
-            var pl = res.result
+            var pl = res.path
+            console.log(pl)
+
             var a = pl.split('?')[1].split('=')[1]
             app.globalData.device_id = a
             console.log('扫描二维码中设备id为=' + app.globalData.device_id)

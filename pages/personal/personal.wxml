@@ -19,7 +19,7 @@
         <view class="name">{{personArr.nickName}}</view>
         <view class="number">
           {{personArr.phone}}
-          <image class="number_img" src="/assets/images/edit.png" mode="aspectFit" bindtap="show"></image>
+          <!-- <image class="number_img" src="/assets/images/edit.png" mode="aspectFit" bindtap="show"></image> -->
         </view>
         <view class="type">微信已绑定</view>
       </view>
@@ -74,7 +74,7 @@
     <view class="weui-cell__hd">
       <image src="/assets/images/dingdan.png" style="margin-right: 10rpx;vertical-align: bottom;width:38rpx; height: 48rpx;padding-right:10rpx;"></image>
     </view>
-    <view class="weui-cell__bd" style="padding-left: 10rpx;">我的订单</view>
+    <view class="weui-cell__bd" style="padding-left: 8rpx;">我的订单</view>
     <view class="weui-cell__ft">
       <image class="right_icon" src="/assets/images/right.png" mode="aspectFit"></image>
     </view>
